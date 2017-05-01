@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpC-uP-ypK">
+                                <rect key="frame" x="250" y="28" width="100" height="30"/>
+                                <state key="normal" title="Get more Data"/>
+                                <connections>
+                                    <action selector="staticRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EDe-y1-b7X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zro-h8-nzY">
+                                <rect key="frame" x="258" y="66" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69l-2T-6Lx">
+                                <rect key="frame" x="216" y="95" width="168" height="30"/>
+                                <state key="normal" title="Start Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ceg-Pr-Tkc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamic Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wze-ye-c29">
+                                <rect key="frame" x="247" y="133" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-07-21 at 12.13.48 AM" translatesAutoresizingMaskIntoConstraints="NO" id="O8a-N4-Neq">
+                                <rect key="frame" x="100" y="192" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="0ny-GX-sjp"/>
+                                    <constraint firstAttribute="height" constant="400" id="Nq2-lb-lNl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO4-Dc-E03">
+                                <rect key="frame" x="217" y="162" width="166" height="30"/>
+                                <state key="normal" title="Stop Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kro-ws-DNn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wze-ye-c29" firstAttribute="top" secondItem="69l-2T-6Lx" secondAttribute="bottom" constant="8" symbolic="YES" id="31M-qN-mYR"/>
+                            <constraint firstItem="69l-2T-6Lx" firstAttribute="top" secondItem="zro-h8-nzY" secondAttribute="bottom" constant="8" symbolic="YES" id="4IV-IX-J9M"/>
+                            <constraint firstItem="WO4-Dc-E03" firstAttribute="top" secondItem="wze-ye-c29" secondAttribute="bottom" constant="8" symbolic="YES" id="AY2-6d-3fF"/>
+                            <constraint firstItem="69l-2T-6Lx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FcM-5o-qwc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O8a-N4-Neq" secondAttribute="bottom" constant="8" symbolic="YES" id="HyW-By-XdS"/>
+                            <constraint firstItem="SpC-uP-ypK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="K8g-a6-DvG"/>
+                            <constraint firstItem="WO4-Dc-E03" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P5l-hn-3Io"/>
+                            <constraint firstItem="O8a-N4-Neq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WXf-t7-K9a"/>
+                            <constraint firstItem="SpC-uP-ypK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="drw-oR-Hwb"/>
+                            <constraint firstItem="wze-ye-c29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dsZ-E3-CXQ"/>
+                            <constraint firstItem="zro-h8-nzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fQF-Jp-7tP"/>
+                            <constraint firstItem="zro-h8-nzY" firstAttribute="top" secondItem="SpC-uP-ypK" secondAttribute="bottom" constant="8" symbolic="YES" id="klJ-Jr-q06"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dynamicLabel" destination="wze-ye-c29" id="9uV-bx-C6d"/>
+                        <outlet property="dynamicStartButton" destination="69l-2T-6Lx" id="lnt-uu-Lbd"/>
+                        <outlet property="dynamicStopButton" destination="WO4-Dc-E03" id="RRj-kM-fdk"/>
+                        <outlet property="image" destination="O8a-N4-Neq" id="5Lo-cd-2M0"/>
+                        <outlet property="staticButton" destination="SpC-uP-ypK" id="pBN-Nr-x4X"/>
+                        <outlet property="staticLabel" destination="zro-h8-nzY" id="YbT-yr-yzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="397"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2016-07-21 at 12.13.48 AM" width="1440" height="900"/>
+    </resources>
+</document>
